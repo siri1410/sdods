@@ -1,5 +1,5 @@
 {
-  "name": "@sdods/core",
+  "name": "@siri1410/core",
   "version": "0.1.0",
   "description": "Core utilities and types for SDODS",
   "main": "./dist/index.js",

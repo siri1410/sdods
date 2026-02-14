@@ -1,5 +1,5 @@
 {
-  "name": "@sdods/auth",
+  "name": "@siri1410/auth",
   "version": "0.1.0",
   "description": "Authentication abstraction for Firebase, Auth0, and custom providers",
   "main": "./dist/index.js",
@@ -33,7 +33,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@sdods/core": "workspace:*"
+    "@siri1410/core": "workspace:*"
   },
   "peerDependencies": {
     "firebase": ">=10.0.0",
