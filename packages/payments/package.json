@@ -1,0 +1,52 @@
+{
+  "name": "@sdods/payments",
+  "version": "1.0.0",
+  "description": "Universal payment abstraction layer - vendor-agnostic payment contracts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./stripe": {
+      "import": "./dist/providers/stripe.mjs",
+      "require": "./dist/providers/stripe.js",
+      "types": "./dist/providers/stripe.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/providers/stripe.ts --format cjs,esm --dts",
+    "test": "vitest",
+    "lint": "eslint src/"
+  },
+  "peerDependencies": {
+    "stripe": ">=14.0.0"
+  },
+  "peerDependenciesMeta": {
+    "stripe": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "stripe": "^17.5.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "keywords": [
+    "payments",
+    "stripe",
+    "abstraction",
+    "sdods",
+    "yarlis"
+  ],
+  "author": "Yarlis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siri1410/sdods"
+  }
+}
