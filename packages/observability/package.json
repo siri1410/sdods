@@ -1,5 +1,5 @@
 {
-  "name": "@siri1410/observability",
+  "name": "@sdods/observability",
   "version": "0.1.0",
   "description": "Observability: logging, tracing, metrics (OpenTelemetry)",
   "main": "./dist/index.js",
@@ -23,7 +23,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@siri1410/core": "workspace:*"
+    "@sdods/core": "workspace:*"
   },
   "peerDependencies": {
     "@opentelemetry/api": ">=1.0.0",
