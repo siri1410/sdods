@@ -1,0 +1,54 @@
+{
+  "name": "@sdods/observability",
+  "version": "0.1.0",
+  "description": "Observability: logging, tracing, metrics (OpenTelemetry)",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@sdods/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "@opentelemetry/api": ">=1.0.0",
+    "@opentelemetry/sdk-node": ">=0.40.0",
+    "@sentry/node": ">=7.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@opentelemetry/api": { "optional": true },
+    "@opentelemetry/sdk-node": { "optional": true },
+    "@sentry/node": { "optional": true }
+  },
+  "devDependencies": {
+    "@opentelemetry/api": "^1.7.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "keywords": ["sdods", "observability", "logging", "tracing", "metrics", "opentelemetry"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siri1410/sdods.git",
+    "directory": "packages/observability"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
