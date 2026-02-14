@@ -1,0 +1,52 @@
+{
+  "name": "@sdods/marketing",
+  "version": "1.0.0",
+  "description": "Universal marketing automation abstraction layer - vendor-agnostic contracts for SEO, email, ads, and social media",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./seo": {
+      "import": "./dist/providers/seo.mjs",
+      "require": "./dist/providers/seo.js",
+      "types": "./dist/providers/seo.d.ts"
+    },
+    "./email": {
+      "import": "./dist/providers/email.mjs",
+      "require": "./dist/providers/email.js",
+      "types": "./dist/providers/email.d.ts"
+    },
+    "./ads": {
+      "import": "./dist/providers/ads.mjs",
+      "require": "./dist/providers/ads.js",
+      "types": "./dist/providers/ads.d.ts"
+    },
+    "./social": {
+      "import": "./dist/providers/social.mjs",
+      "require": "./dist/providers/social.js",
+      "types": "./dist/providers/social.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup src/index.ts src/providers/*.ts --format cjs,esm --dts",
+    "test": "vitest"
+  },
+  "keywords": ["marketing", "seo", "email", "ads", "social-media", "automation", "abstraction"],
+  "author": "Yarlis <contact@yarlis.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siri1410/sdods"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "tsup": "^8.0.0",
+    "vitest": "^1.0.0"
+  }
+}
