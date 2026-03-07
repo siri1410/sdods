@@ -1,0 +1,46 @@
+{
+  "name": "@sdods/themes",
+  "version": "0.1.0",
+  "description": "Domain-based theming via CSS variables for Yarlis products",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./src/styles/themes.css",
+    "./registry": {
+      "import": "./dist/registry.js",
+      "types": "./dist/registry.d.ts"
+    }
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist",
+    "src/styles"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": ["themes", "css-variables", "tailwind", "design-tokens"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siri1410/sdods.git",
+    "directory": "packages/themes"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

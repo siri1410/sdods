@@ -1,0 +1,52 @@
+{
+  "name": "@sdods/comms",
+  "version": "0.1.0",
+  "description": "Unified communications layer - Email, SMS, Push with vendor abstraction",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./email": {
+      "import": "./dist/providers/email/index.js",
+      "types": "./dist/providers/email/index.d.ts"
+    },
+    "./email/mailchimp": {
+      "import": "./dist/providers/email/mailchimp.js",
+      "types": "./dist/providers/email/mailchimp.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.0",
+    "@mailchimp/mailchimp_transactional": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@mailchimp/mailchimp_marketing": { "optional": true },
+    "@mailchimp/mailchimp_transactional": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0"
+  },
+  "keywords": ["email", "sms", "push", "mailchimp", "communications", "abstraction"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siri1410/sdods.git",
+    "directory": "packages/comms"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
